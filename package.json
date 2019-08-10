@@ -31,7 +31,7 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "test": "react-scripts test",
-    "test-coverage": "react-scripts test --coverage --watchAll=false"
+    "test-coverage": "react-scripts test --coverage"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -47,7 +47,10 @@
       "!src/actionTypes/*",
       "!src/interfaces/**/*",
       "!src/mocks/*",
-      "!src/serviceWorker.ts"
+      "!src/serviceWorker.ts",
+      "!src/store.ts",
+      "!src/index.tsx",
+      "!src/react-app-env.d.ts"
     ],
     "coverageThreshold": {
       "global": {
