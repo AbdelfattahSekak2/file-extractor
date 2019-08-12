@@ -26,12 +26,14 @@ const Dropzone: React.FunctionComponent<IProps> = ({
   const onDragOver = (e: any) => e.preventDefault();
 
   return (
-    <div
+    <label
       className="dropzone-container"
       onDrop={onDrop}
       onDragOver={onDragOver}
+      htmlFor="file"
     >
       <input
+        id="file"
         className="file-input"
         type="file"
         onChange={onChange}
@@ -43,7 +45,7 @@ const Dropzone: React.FunctionComponent<IProps> = ({
         src="images/upload-to-cloud.png"
       />
       <span>Upload Files</span>
-    </div>
+    </label>
   );
 }
 
