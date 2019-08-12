@@ -1,0 +1,15 @@
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  grid-template-rows: 3fr 1fr;
+  grid-template-areas: "uploader extraction-view" "recent-images extraction-view";
+  .uploader {
+    grid-area: uploader;
+  }
+  .extraction-view {
+    grid-area: extraction-view;
+  }
+  .recent-images {
+    grid-area: recent-images;
+  }
+}

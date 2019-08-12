@@ -4,10 +4,11 @@ import { Provider } from 'react-redux';
 
 import * as serviceWorker from './serviceWorker';
 import { store } from './store';
+import Dashboard from './components/Dashboard';
 
 ReactDOM.render(
   <Provider store={store}>
-    <div>test</div>
+    <Dashboard />
   </Provider>
   , document.getElementById('root'));
 
