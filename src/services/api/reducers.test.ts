@@ -1,4 +1,4 @@
-import { apiErrors, apiPendingRequests, apiSuccess } from "./reducer";
+import { apiErrors, apiPendingRequests, apiSuccess } from "./reducers";
 
 import { GetExtraction } from "../../actionTypes/extraction";
 

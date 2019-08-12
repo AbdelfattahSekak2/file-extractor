@@ -2,14 +2,20 @@ import { applyMiddleware, combineReducers, compose, createStore } from "redux";
 import createSagaMiddleware from "redux-saga";
 import { all } from "redux-saga/effects";
 
-import * as apiReducers from "./services/api/reducer";
+import * as apiReducers from "./services/api/reducers";
+import * as extractionReducers from "./services/api/extraction/reducers";
+
+import extractionSaga from "./services/api/extraction/saga";
 
 const rootReducer = combineReducers({
   ...apiReducers,
+  ...extractionReducers,
 });
 
 function* rootSaga() {
-  yield all([]);
+  yield all([
+    extractionSaga(),
+  ]);
 }
 
 const sagaMiddleware = createSagaMiddleware();
