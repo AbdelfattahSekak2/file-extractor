@@ -4,8 +4,20 @@ exports[`Dashboard component should render correctly 1`] = `
 <div
   className="dashboard-container"
 >
-  <Connect(ErrorMessage) />
-  <Connect(Uploader) />
-  <Connect(ExtractionView) />
+  <div
+    className="dashboard-title"
+  >
+    <strong>
+      Mindee
+    </strong>
+     File Extractor
+  </div>
+  <div
+    className="content"
+  >
+    <Connect(ErrorMessage) />
+    <Connect(Uploader) />
+    <Connect(ExtractionView) />
+  </div>
 </div>
 `;

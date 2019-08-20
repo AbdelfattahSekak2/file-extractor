@@ -61,17 +61,17 @@ describe("Canvas class", () => {
         strokeStyle: "red",
       },
       {
-        coord_x1: 0.255,
-        coord_x2: 0.2,
-        coord_y1: 0.461,
-        coord_y2: 0.927,
-        strokeStyle: "red",
-      },
-      {
         coord_x1: 0.216,
         coord_x2: 0.256,
         coord_y1: 0.16,
         coord_y2: 0.145,
+        strokeStyle: "red",
+      },
+      {
+        coord_x1: 0.255,
+        coord_x2: 0.2,
+        coord_y1: 0.461,
+        coord_y2: 0.927,
         strokeStyle: "red",
       },
     ]);
