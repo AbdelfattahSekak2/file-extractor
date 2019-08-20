@@ -1,5 +1,5 @@
 import { extraction } from "./reducers";
-import { GetExtraction } from "../../../actionTypes/extraction";
+import { GetExtraction, ClearExtractionState } from "../../../actionTypes/extraction";
 import { extraction as extractionMock } from "../../../mocks/extraction";
 
 describe("extraction reducer", () => {
@@ -9,6 +9,13 @@ describe("extraction reducer", () => {
       type: GetExtraction.SUCCESS,
     };
     expect(extraction(null, action)).toEqual(extractionMock);
+  });
+
+  it("should return return null", () => {
+    const action = {
+      type: ClearExtractionState.DEFAULT,
+    };
+    expect(extraction(extractionMock, action)).toEqual(null);
   });
   it("should return the same state", () => {
     const action = {

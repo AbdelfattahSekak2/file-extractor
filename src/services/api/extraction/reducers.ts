@@ -1,10 +1,12 @@
-import Extraction from "../../../interfaces/extractions";
-import { GetExtraction } from "../../../actionTypes/extraction";
+import Extraction from "../../../interfaces/extraction";
+import { GetExtraction, ClearExtractionState } from "../../../actionTypes/extraction";
 
-export function extraction (state: Extraction | null = null, action: any) {
+export function extraction(state: Extraction | null = null, action: any) {
   switch (action.type) {
     case GetExtraction.SUCCESS:
       return action.extraction;
+    case ClearExtractionState.DEFAULT:
+      return null;
     default:
       return state;
   }

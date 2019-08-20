@@ -3,3 +3,7 @@ export const GetExtraction = {
   SUCCESS: "GET_EXTRACTION_SUCCESS",
   REQUEST: "GET_EXTRACTION_REQUEST",
 }
+
+export const ClearExtractionState = {
+  DEFAULT: "CLEAR_EXTRACTION_STATE_DEFAULT",
+}

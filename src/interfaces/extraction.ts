@@ -1,11 +1,11 @@
-interface Coordinates {
+export interface Coordinates {
   coord_x1: number;
   coord_x2: number;
   coord_y1: number;
   coord_y2: number;
 }
 
-interface Tax extends Coordinates {
+export interface Tax extends Coordinates {
   rate: number;
   amount: number;
   probability: number;
@@ -22,7 +22,7 @@ interface Total extends Coordinates {
   probability: number,
 }
 
-interface Prediction {
+export interface Prediction {
   orientation: {
     degrees: string;
     probability: number;

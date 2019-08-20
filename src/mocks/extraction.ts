@@ -1,4 +1,4 @@
-import Extraction from "../interfaces/extractions";
+import Extraction from "../interfaces/extraction";
 
 export const extraction: Extraction = {
   "details": {
