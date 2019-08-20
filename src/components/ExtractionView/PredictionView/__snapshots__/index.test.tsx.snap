@@ -1,0 +1,400 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PredictionView  component should match snapshot when category is undefined 1`] = `
+<div
+  className="prediction-container"
+>
+  <div
+    className="title"
+  >
+    Prediction 
+    1
+  </div>
+  <PredictionItem
+    element={
+      Object {
+        "probability": 0.723,
+        "sign": "°",
+        "value": "0",
+      }
+    }
+    label="Orientation"
+  />
+  <PredictionItem
+    element={
+      Object {
+        "probability": 0.972,
+        "value": "2018-01-02",
+      }
+    }
+    label="Date"
+  />
+  <PredictionItem
+    element={
+      Object {
+        "probability": 0.801,
+        "sign": "€",
+        "value": 0.732,
+      }
+    }
+    label="Total"
+  />
+  <PredictionItem
+    element={
+      Array [
+        Object {
+          "probability": 0.647,
+          "sign": "€",
+          "subValue": Object {
+            "label": "Rate",
+            "value": 0.476,
+          },
+          "value": 0.57,
+        },
+      ]
+    }
+    label="Taxes"
+  />
+</div>
+`;
+
+exports[`PredictionView  component should match snapshot when date is undefined 1`] = `
+<div
+  className="prediction-container"
+>
+  <div
+    className="title"
+  >
+    Prediction 
+    1
+  </div>
+  <PredictionItem
+    element={
+      Object {
+        "probability": 0.723,
+        "sign": "°",
+        "value": "0",
+      }
+    }
+    label="Orientation"
+  />
+  <PredictionItem
+    element={
+      Object {
+        "probability": 0.302,
+        "value": "parking",
+      }
+    }
+    label="Category"
+  />
+  <PredictionItem
+    element={
+      Object {
+        "probability": 0.801,
+        "sign": "€",
+        "value": 0.732,
+      }
+    }
+    label="Total"
+  />
+  <PredictionItem
+    element={
+      Array [
+        Object {
+          "probability": 0.647,
+          "sign": "€",
+          "subValue": Object {
+            "label": "Rate",
+            "value": 0.476,
+          },
+          "value": 0.57,
+        },
+      ]
+    }
+    label="Taxes"
+  />
+</div>
+`;
+
+exports[`PredictionView  component should match snapshot when orientation is undefined 1`] = `
+<div
+  className="prediction-container"
+>
+  <div
+    className="title"
+  >
+    Prediction 
+    1
+  </div>
+  <PredictionItem
+    element={
+      Object {
+        "probability": 0.302,
+        "value": "parking",
+      }
+    }
+    label="Category"
+  />
+  <PredictionItem
+    element={
+      Object {
+        "probability": 0.972,
+        "value": "2018-01-02",
+      }
+    }
+    label="Date"
+  />
+  <PredictionItem
+    element={
+      Object {
+        "probability": 0.801,
+        "sign": "€",
+        "value": 0.732,
+      }
+    }
+    label="Total"
+  />
+  <PredictionItem
+    element={
+      Array [
+        Object {
+          "probability": 0.647,
+          "sign": "€",
+          "subValue": Object {
+            "label": "Rate",
+            "value": 0.476,
+          },
+          "value": 0.57,
+        },
+      ]
+    }
+    label="Taxes"
+  />
+</div>
+`;
+
+exports[`PredictionView  component should match snapshot when taxes is empty 1`] = `
+<div
+  className="prediction-container"
+>
+  <div
+    className="title"
+  >
+    Prediction 
+    1
+  </div>
+  <PredictionItem
+    element={
+      Object {
+        "probability": 0.723,
+        "sign": "°",
+        "value": "0",
+      }
+    }
+    label="Orientation"
+  />
+  <PredictionItem
+    element={
+      Object {
+        "probability": 0.302,
+        "value": "parking",
+      }
+    }
+    label="Category"
+  />
+  <PredictionItem
+    element={
+      Object {
+        "probability": 0.972,
+        "value": "2018-01-02",
+      }
+    }
+    label="Date"
+  />
+  <PredictionItem
+    element={
+      Object {
+        "probability": 0.801,
+        "sign": "€",
+        "value": 0.732,
+      }
+    }
+    label="Total"
+  />
+</div>
+`;
+
+exports[`PredictionView  component should match snapshot when taxes is undefined 1`] = `
+<div
+  className="prediction-container"
+>
+  <div
+    className="title"
+  >
+    Prediction 
+    1
+  </div>
+  <PredictionItem
+    element={
+      Object {
+        "probability": 0.723,
+        "sign": "°",
+        "value": "0",
+      }
+    }
+    label="Orientation"
+  />
+  <PredictionItem
+    element={
+      Object {
+        "probability": 0.302,
+        "value": "parking",
+      }
+    }
+    label="Category"
+  />
+  <PredictionItem
+    element={
+      Object {
+        "probability": 0.972,
+        "value": "2018-01-02",
+      }
+    }
+    label="Date"
+  />
+  <PredictionItem
+    element={
+      Object {
+        "probability": 0.801,
+        "sign": "€",
+        "value": 0.732,
+      }
+    }
+    label="Total"
+  />
+</div>
+`;
+
+exports[`PredictionView  component should match snapshot when total is undefined 1`] = `
+<div
+  className="prediction-container"
+>
+  <div
+    className="title"
+  >
+    Prediction 
+    1
+  </div>
+  <PredictionItem
+    element={
+      Object {
+        "probability": 0.723,
+        "sign": "°",
+        "value": "0",
+      }
+    }
+    label="Orientation"
+  />
+  <PredictionItem
+    element={
+      Object {
+        "probability": 0.302,
+        "value": "parking",
+      }
+    }
+    label="Category"
+  />
+  <PredictionItem
+    element={
+      Object {
+        "probability": 0.972,
+        "value": "2018-01-02",
+      }
+    }
+    label="Date"
+  />
+  <PredictionItem
+    element={
+      Array [
+        Object {
+          "probability": 0.647,
+          "sign": "€",
+          "subValue": Object {
+            "label": "Rate",
+            "value": 0.476,
+          },
+          "value": 0.57,
+        },
+      ]
+    }
+    label="Taxes"
+  />
+</div>
+`;
+
+exports[`PredictionView  component should render correctly 1`] = `
+<div
+  className="prediction-container"
+>
+  <div
+    className="title"
+  >
+    Prediction 
+    1
+  </div>
+  <PredictionItem
+    element={
+      Object {
+        "probability": 0.723,
+        "sign": "°",
+        "value": "0",
+      }
+    }
+    label="Orientation"
+  />
+  <PredictionItem
+    element={
+      Object {
+        "probability": 0.302,
+        "value": "parking",
+      }
+    }
+    label="Category"
+  />
+  <PredictionItem
+    element={
+      Object {
+        "probability": 0.972,
+        "value": "2018-01-02",
+      }
+    }
+    label="Date"
+  />
+  <PredictionItem
+    element={
+      Object {
+        "probability": 0.801,
+        "sign": "€",
+        "value": 0.732,
+      }
+    }
+    label="Total"
+  />
+  <PredictionItem
+    element={
+      Array [
+        Object {
+          "probability": 0.647,
+          "sign": "€",
+          "subValue": Object {
+            "label": "Rate",
+            "value": 0.476,
+          },
+          "value": 0.57,
+        },
+      ]
+    }
+    label="Taxes"
+  />
+</div>
+`;

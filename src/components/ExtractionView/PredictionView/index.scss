@@ -1,0 +1,13 @@
+.prediction-container {
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .title {
+    color: #aaa7a7;
+    font-weight: 700;
+    font-size: 22px;
+    margin: 10px;
+    text-align: center;
+  }
+}

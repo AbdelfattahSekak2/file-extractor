@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExtractionView component should match snapshot when extraction is null 1`] = `""`;
+
+exports[`ExtractionView component should match snapshot when it's data loading 1`] = `
+<Dimmer
+  active={true}
+>
+  <Loader
+    indeterminate={true}
+    size="huge"
+  >
+    Preparing your file
+  </Loader>
+</Dimmer>
+`;
+
+exports[`ExtractionView component should render correctly 1`] = `
+<div
+  className="extraction-container"
+>
+  <PredictionView
+    count={1}
+    key="0"
+    prediction={
+      Object {
+        "category": Object {
+          "probability": 0.302,
+          "value": "parking",
+        },
+        "date": Object {
+          "coord_x1": 0.865,
+          "coord_x2": 0.18,
+          "coord_y1": 0.249,
+          "coord_y2": 0.818,
+          "date_INTL": "2018-01-02",
+          "date_US": "2012-10-26",
+          "probability": 0.972,
+        },
+        "orientation": Object {
+          "degrees": "0",
+          "probability": 0.723,
+        },
+        "taxes": Array [
+          Object {
+            "amount": 0.57,
+            "coord_x1": 0.216,
+            "coord_x2": 0.256,
+            "coord_y1": 0.16,
+            "coord_y2": 0.145,
+            "probability": 0.647,
+            "rate": 0.476,
+          },
+        ],
+        "total": Object {
+          "amount": 0.732,
+          "coord_x1": 0.255,
+          "coord_x2": 0.2,
+          "coord_y1": 0.461,
+          "coord_y2": 0.927,
+          "probability": 0.801,
+        },
+      }
+    }
+  />
+</div>
+`;

@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PredictionItem component should render correctly 1`] = `
+<div
+  className="prediction-item"
+>
+  <label>
+    label
+  </label>
+  <div
+    className="details"
+  >
+    <p>
+      value
+    </p>
+    <div
+      className="bar"
+      style={
+        Object {
+          "borderRadius": "0 6px 6px 0",
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`PredictionItem component should should match snapshot when element is a list 1`] = `
+<div
+  className="prediction-item"
+>
+  <label>
+    label
+  </label>
+  <div
+    className="details-list"
+  >
+    <div
+      className="details"
+      key="0"
+    >
+      <p>
+        value
+         
+      </p>
+      <div
+        className="bar"
+        style={
+          Object {
+            "borderRadius": "0 6px 6px 0",
+            "width": "100%",
+          }
+        }
+      />
+    </div>
+    <div
+      className="details"
+      key="1"
+    >
+      <p>
+        value
+         
+      </p>
+      <div
+        className="bar"
+        style={
+          Object {
+            "borderRadius": "0 6px 6px 0",
+            "width": "100%",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PredictionItem component should should match snapshot when subValue is defined 1`] = `
+<div
+  className="prediction-item"
+>
+  <label>
+    label
+  </label>
+  <div
+    className="details-list"
+  >
+    <div
+      className="details"
+      key="0"
+    >
+      <p>
+        value
+         
+        <SubValue
+          label="label"
+          value="value"
+        />
+      </p>
+      <div
+        className="bar"
+        style={
+          Object {
+            "borderRadius": "0 6px 6px 0",
+            "width": "100%",
+          }
+        }
+      />
+    </div>
+    <div
+      className="details"
+      key="1"
+    >
+      <p>
+        value
+         
+      </p>
+      <div
+        className="bar"
+        style={
+          Object {
+            "borderRadius": "0 6px 6px 0",
+            "width": "100%",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
