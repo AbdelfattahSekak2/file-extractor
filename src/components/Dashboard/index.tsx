@@ -3,10 +3,16 @@ import * as React from "react";
 import "./index.scss";
 
 import UploderContainer from "../../containers/UploderContainer";
+import ExtractionContainer from "../../containers/ExtractionContainer";
+import ErrorContainer from "../../containers/ErrorContainer";
 
-const Dashboard: React.FunctionComponent<any> = () => <div className="dashboard-container">
-  <UploderContainer />
-</div>
+const Dashboard: React.FunctionComponent = () => (
+  <div className="dashboard-container">
+    <ErrorContainer />
+    <UploderContainer />
+    <ExtractionContainer />
+  </div>
+)
 
 export default Dashboard;
 
