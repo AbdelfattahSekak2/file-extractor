@@ -1,5 +1,5 @@
+import { mount, ReactWrapper, shallow, ShallowWrapper } from "enzyme";
 import React from "react";
-import { mount, ShallowWrapper, shallow, ReactWrapper } from "enzyme";
 
 import ErrorMessage from ".";
 
@@ -33,6 +33,6 @@ describe("ErrorMessage component", () => {
   it("should handle on close state correctly", () => {
     // @ts-ignore
     wrapper.find("Modal").props().onClose();
-    expect(wrapper.find("Modal").prop("open")).toBeFalsy;
+    expect(wrapper.find("Modal").prop("open")).toBeFalsy();
   });
-})
+});

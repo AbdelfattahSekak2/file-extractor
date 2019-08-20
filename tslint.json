@@ -1,0 +1,25 @@
+{
+  "extends": [
+    "tslint:recommended"
+  ],
+  "rules": {
+    "interface-name": [false, "always-prefix"],
+    "indent": [
+      true,
+      "spaces",
+      2
+    ],
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "allow-leading-userscore"
+    ]
+  },
+  "linterOptions": {
+    "exclude": [
+      "!src/**/*.{js,jsx,ts,tsx}",
+      "**/src/translations/**/*.js",
+      "**/src/serviceWorker.ts"
+    ]
+  }
+}

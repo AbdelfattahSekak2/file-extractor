@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Modal, Button, Icon } from 'semantic-ui-react';
+import React, { useEffect, useState } from "react";
+import { Button, Icon, Modal } from "semantic-ui-react";
 
 import "./index.scss";
 
@@ -16,8 +16,8 @@ const ErrorMessage: React.FunctionComponent<IAppProps> = ({
 
   const handleClearState = () => {
     setOpen(false);
-    clearError()
-  }
+    clearError();
+  };
 
   useEffect(() => {
     if (error) {
@@ -38,7 +38,6 @@ const ErrorMessage: React.FunctionComponent<IAppProps> = ({
         <Button onClick={handleClearState}>Try again</Button>
       </Modal.Content>
     </Modal>
-  )
-}
+  );
+};
 export default ErrorMessage;
-

@@ -1,17 +1,17 @@
+import { shallow, ShallowWrapper } from "enzyme";
 import React from "react";
-import { ShallowWrapper, shallow } from "enzyme";
 
-import PredictionItem, { getProbability } from "."
+import PredictionItem, { getProbability } from ".";
 
 describe("PredictionItem component", () => {
   const element = {
-    value: "value",
     probability: 1,
+    value: "value",
   };
   const defaultProps = {
+    element,
     label: "label",
-    element
-  }
+  };
   let wrapper: ShallowWrapper;
   it("should render correctly", () => {
     wrapper = shallow(<PredictionItem {...defaultProps} />);
@@ -29,8 +29,8 @@ describe("PredictionItem component", () => {
       {
         ...element,
         subValue: {
+          label: "label",
           value: "value",
-          label: "label"
         },
       }
       , element]} />);
@@ -38,19 +38,18 @@ describe("PredictionItem component", () => {
   });
 });
 
-
 describe("getProbability function", () => {
 
   it("should return the correct object when the probability is other than 1", () => {
     expect(getProbability(0.8)).toEqual({
-      width: "80%",
       borderRadius: "0",
+      width: "80%",
     });
   });
   it("should return the correct object when the probability equal 1", () => {
     expect(getProbability(1)).toEqual({
-      width: "100%",
       borderRadius: "0 6px 6px 0",
+      width: "100%",
     });
   });
 });

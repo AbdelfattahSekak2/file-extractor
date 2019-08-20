@@ -1,6 +1,6 @@
-import { extraction } from "./reducers";
-import { GetExtraction, ClearExtractionState } from "../../../actionTypes/extraction";
+import { ClearExtractionState, GetExtraction } from "../../../actionTypes/extraction";
 import { extraction as extractionMock } from "../../../mocks/extraction";
+import { extraction } from "./reducers";
 
 describe("extraction reducer", () => {
   it("should return the correct object on success", () => {

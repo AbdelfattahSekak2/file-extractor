@@ -1,14 +1,14 @@
-import { GetExtraction } from "../../../actionTypes/extraction";
-import { put, call } from "redux-saga/effects";
 import { cloneableGenerator } from "@redux-saga/testing-utils";
+import { call, put } from "redux-saga/effects";
+import { GetExtraction } from "../../../actionTypes/extraction";
 
 import * as apiClient from "./api";
 
-import { getExtraction } from "./saga";
 import { extraction } from "../../../mocks/extraction";
+import { getExtraction } from "./saga";
 
 describe("getExtraction saga function", () => {
-  const file = new FormData;
+  const file = new FormData();
   const action = {
     file,
     type: GetExtraction.REQUEST,

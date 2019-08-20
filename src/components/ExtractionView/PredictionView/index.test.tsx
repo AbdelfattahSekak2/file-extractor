@@ -1,7 +1,7 @@
+import { shallow, ShallowWrapper } from "enzyme";
 import React from "react";
-import { ShallowWrapper, shallow } from "enzyme";
 
-import PredictionView from "."
+import PredictionView from ".";
 
 import { extraction } from "../../../mocks/extraction";
 
@@ -56,4 +56,4 @@ describe("PredictionView  component", () => {
     }} />);
     expect(wrapper).toMatchSnapshot();
   });
-})
+});

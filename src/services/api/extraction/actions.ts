@@ -1,14 +1,14 @@
-import { GetExtraction, ClearExtractionState } from "../../../actionTypes/extraction";
+import { ClearExtractionState, GetExtraction } from "../../../actionTypes/extraction";
 
 export function getExtraction(file: FormData) {
   return {
-    type: GetExtraction.REQUEST,
     file,
-  }
+    type: GetExtraction.REQUEST,
+  };
 }
 
 export function clearExtractionState() {
   return {
     type: ClearExtractionState.DEFAULT,
-  }
+  };
 }

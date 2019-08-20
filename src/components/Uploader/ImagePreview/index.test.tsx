@@ -1,5 +1,5 @@
+import { mount, ReactWrapper, shallow, ShallowWrapper } from "enzyme";
 import React from "react";
-import { ShallowWrapper, shallow, mount, ReactWrapper } from "enzyme";
 
 import * as helpers from "./helpers";
 
@@ -11,15 +11,15 @@ describe("ImagePreview component", () => {
   helpers.handleCanvas = jest.fn();
   window.URL.createObjectURL = jest.fn(() => "url");
   const handleDelete = jest.fn();
-  const file = new File([""], "filename", { type: 'text/html' });
+  const file = new File([""], "filename", { type: "text/html" });
   const setError = jest.fn();
   const defaultProps = {
-    setError,
-    handleDelete,
-    file,
     extraction,
+    file,
+    handleDelete,
+    setError,
     supported: true,
-  }
+  };
   let wrapper: ShallowWrapper | ReactWrapper;
 
   it("should render correctly", () => {

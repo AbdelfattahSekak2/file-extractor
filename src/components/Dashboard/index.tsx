@@ -2,9 +2,9 @@ import * as React from "react";
 
 import "./index.scss";
 
-import UploderContainer from "../../containers/UploderContainer";
-import ExtractionContainer from "../../containers/ExtractionContainer";
 import ErrorContainer from "../../containers/ErrorContainer";
+import ExtractionContainer from "../../containers/ExtractionContainer";
+import UploderContainer from "../../containers/UploderContainer";
 
 const Dashboard: React.FunctionComponent = () => (
   <div className="dashboard-container">
@@ -15,7 +15,6 @@ const Dashboard: React.FunctionComponent = () => (
       <ExtractionContainer />
     </div>
   </div>
-)
+);
 
 export default Dashboard;
-

@@ -1,6 +1,6 @@
 import { SetError } from "../../../actionTypes/error";
-import { error } from "./reducers";
 import { GetExtraction } from "../../../actionTypes/extraction";
+import { error } from "./reducers";
 
 describe("error reducer", () => {
   it("should return the correct object on success state", () => {

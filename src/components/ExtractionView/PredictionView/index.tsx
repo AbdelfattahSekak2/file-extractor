@@ -23,9 +23,9 @@ const PredictionView: React.FunctionComponent<IProps> = ({
         <PredictionItem
           label="Orientation"
           element={{
-            value: orientation.degrees,
-            sign: "°",
             probability: orientation.probability,
+            sign: "°",
+            value: orientation.degrees,
           }}
         />
       }
@@ -34,8 +34,8 @@ const PredictionView: React.FunctionComponent<IProps> = ({
         <PredictionItem
           label="Category"
           element={{
-            value: category.value,
             probability: category.probability,
+            value: category.value,
           }}
         />
       }
@@ -44,8 +44,8 @@ const PredictionView: React.FunctionComponent<IProps> = ({
         <PredictionItem
           label="Date"
           element={{
-            value: date.date_INTL,
             probability: date.probability,
+            value: date.date_INTL,
           }}
         />
       }
@@ -54,9 +54,9 @@ const PredictionView: React.FunctionComponent<IProps> = ({
         <PredictionItem
           label="Total"
           element={{
-            value: total.amount,
-            sign: "€",
             probability: total.probability,
+            sign: "€",
+            value: total.amount,
           }}
         />
       }
@@ -65,19 +65,18 @@ const PredictionView: React.FunctionComponent<IProps> = ({
         <PredictionItem
           label="Taxes"
           element={taxes.map((e: Tax) => ({
-            value: e.amount,
+            probability: e.probability,
             sign: "€",
             subValue: {
               label: "Rate",
               value: e.rate,
             },
-            probability: e.probability,
+            value: e.amount,
           }))}
         />
       }
     </div >
   );
-}
+};
 
 export default PredictionView;
-

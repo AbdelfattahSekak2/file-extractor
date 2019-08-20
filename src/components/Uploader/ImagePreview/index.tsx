@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, Ref } from "react";
 import cx from "classnames";
+import React, { Ref, useEffect, useRef } from "react";
 import { Icon } from "semantic-ui-react";
 
 import "./index.scss";
@@ -13,7 +13,7 @@ interface IProps {
   handleDelete: () => void;
   extraction: Extraction;
   setError: (message: string) => void;
-  supported: boolean
+  supported: boolean;
 }
 
 const ImagePreview: React.FunctionComponent<IProps> = ({
@@ -35,7 +35,7 @@ const ImagePreview: React.FunctionComponent<IProps> = ({
       const canvas = new Canvas(canvasRef.current);
       handleCanvas(canvas, extraction, file, setError);
     }
-  }, [extraction, file, setError, supported])
+  }, [extraction, file, setError, supported]);
   return <div className="image-preview">
     <Icon name="times" size="big" onClick={handleDelete} className={cx({ supported })} />
     {
@@ -50,4 +50,3 @@ const ImagePreview: React.FunctionComponent<IProps> = ({
 };
 
 export default ImagePreview;
-

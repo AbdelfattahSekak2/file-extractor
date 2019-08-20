@@ -1,12 +1,12 @@
 import * as React from "react";
-import { Loader, Dimmer } from "semantic-ui-react";
+import { Dimmer, Loader } from "semantic-ui-react";
 
 import Extraction, { Prediction } from "../../interfaces/extraction";
 
+import { GetExtraction } from "../../actionTypes/extraction";
+import { ApiState } from "../../interfaces/apiState";
 import "./index.scss";
 import PredictionView from "./PredictionView";
-import { ApiState } from "../../interfaces/apiState";
-import { GetExtraction } from "../../actionTypes/extraction";
 
 interface IProps {
   apiPendingRequests: ApiState[];
@@ -22,11 +22,11 @@ const ExtractionView: React.FunctionComponent<IProps> = ({
   if (loading) {
     content = <Dimmer active>
       <Loader size="huge" indeterminate>Preparing your file</Loader>
-    </Dimmer>
+    </Dimmer>;
   } else if (extraction && extraction.predictions && extraction.predictions.length > 0) {
     content = <div className="extraction-container">{
       extraction.predictions.map(
-        (item: Prediction, key: number) => <PredictionView count={key + 1} key={key} prediction={item} />
+        (item: Prediction, key: number) => <PredictionView count={key + 1} key={key} prediction={item} />,
       )
     }</div>;
   }
@@ -34,4 +34,3 @@ const ExtractionView: React.FunctionComponent<IProps> = ({
 };
 
 export default ExtractionView;
-

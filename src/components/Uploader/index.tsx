@@ -5,9 +5,9 @@ import ImagePreview from "./ImagePreview";
 
 import "./index.scss";
 
-import Extraction from "../../interfaces/extraction";
-import { ApiState } from "../../interfaces/apiState";
 import { GetExtraction } from "../../actionTypes/extraction";
+import { ApiState } from "../../interfaces/apiState";
+import Extraction from "../../interfaces/extraction";
 
 interface IProps {
   getExtraction: (file: FormData) => void;
@@ -26,19 +26,19 @@ const Uploader: React.FunctionComponent<IProps> = ({
 }) => {
   const [file, setFile] = useState();
 
-  const readFile = (file: File) => {
-    setFile(file);
+  const readFile = (f: File) => {
+    setFile(f);
     const formData = new FormData();
-    formData.append("file", file);
+    formData.append("file", f);
     getExtraction(formData);
-  }
+  };
 
   const handleDelete = () => {
     clearExtractionState();
     URL.revokeObjectURL(file);
     setFile(undefined);
-  }
-  
+  };
+
   const loading = apiPendingRequests.some((item: ApiState) => item.type === GetExtraction.REQUEST);
   let content: React.ReactElement | null = null;
   if (!loading) {
@@ -49,7 +49,7 @@ const Uploader: React.FunctionComponent<IProps> = ({
         handleDelete={handleDelete}
         extraction={extraction}
         supported={!file.type.includes("zip") && !file.type.includes("pdf")}
-      />
+      />;
     } else {
       content = <Dropzone setError={setError} onFileAdded={readFile} />;
     }
@@ -58,4 +58,3 @@ const Uploader: React.FunctionComponent<IProps> = ({
 };
 
 export default Uploader;
-

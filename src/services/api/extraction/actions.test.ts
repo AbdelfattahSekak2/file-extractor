@@ -1,21 +1,18 @@
-import { getExtraction, clearExtractionState } from "./actions";
-import { GetExtraction, ClearExtractionState } from "../../../actionTypes/extraction";
+import { ClearExtractionState, GetExtraction } from "../../../actionTypes/extraction";
+import { clearExtractionState, getExtraction } from "./actions";
 
 describe("getExraction action", () => {
-  const file = new FormData;
+  const file = new FormData();
   it("should return a plain object", () => {
     expect(getExtraction(file)).toEqual({
-      type: GetExtraction.REQUEST,
       file,
+      type: GetExtraction.REQUEST,
     });
-  })
-})
+  });
+});
 
 describe("clearExtractionState action", () => {
   it("should return a plain object", () => {
     expect(clearExtractionState()).toEqual({ type: ClearExtractionState.DEFAULT });
-  })
-})
-
-
-
+  });
+});

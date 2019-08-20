@@ -8,7 +8,7 @@ interface Element {
   subValue?: {
     label: string;
     value: string | number;
-  }
+  };
   probability: number;
 }
 
@@ -18,9 +18,9 @@ interface IProps {
 }
 
 export const getProbability = (probability: number) => ({
-    width: `${probability * 100}%`,
-    borderRadius: probability === 1 ? "0 6px 6px 0" : "0",
-  })
+  borderRadius: probability === 1 ? "0 6px 6px 0" : "0",
+  width: `${probability * 100}%`,
+});
 
 const SubValue = ({ value, label }: { value: string | number; label: string }) => <>
   ({label} : <strong>{value}</strong>)
@@ -42,7 +42,7 @@ const PredictionItem: React.FunctionComponent<IProps> = ({
                   {item.value}{item.sign} {item.subValue ? <SubValue {...item.subValue} /> : null}
                 </p>
                 <div className="bar" style={getProbability(item.probability)} />
-              </div>
+              </div>,
             )
           }
         </div>
@@ -55,4 +55,3 @@ const PredictionItem: React.FunctionComponent<IProps> = ({
 };
 
 export default PredictionItem;
-

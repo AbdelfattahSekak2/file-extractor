@@ -17,7 +17,6 @@ const supportedFiles = [
   "zip",
 ];
 
-
 const Dropzone: React.FunctionComponent<IProps> = ({
   onFileAdded,
   setError,
@@ -25,18 +24,17 @@ const Dropzone: React.FunctionComponent<IProps> = ({
   const onChange = (e: any) => handleOnFileAdded(e.target.files[0]);
 
   const handleOnFileAdded = (file: File) => {
-    console.log(file.type)
     if (supportedFiles.some((e: string) => file.type.includes(e))) {
-      onFileAdded(file)
+      onFileAdded(file);
     } else {
-      setError("The file extension is not supported")
+      setError("The file extension is not supported");
     }
-  }
+  };
 
   const onDrop = (e: any) => {
     e.preventDefault();
-    handleOnFileAdded(e.dataTransfer.files[0])
-  }
+    handleOnFileAdded(e.dataTransfer.files[0]);
+  };
 
   const onDragOver = (e: any) => e.preventDefault();
   return (
@@ -56,6 +54,6 @@ const Dropzone: React.FunctionComponent<IProps> = ({
       <Icon name="cloud upload" size="huge" />
     </label>
   );
-}
+};
 
 export default Dropzone;

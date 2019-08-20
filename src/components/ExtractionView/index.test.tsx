@@ -1,15 +1,15 @@
 import React from "react";
 
-import ExtractionView from "."
-import { ShallowWrapper, shallow } from "enzyme";
-import { extraction } from "../../mocks/extraction";
+import { shallow, ShallowWrapper } from "enzyme";
+import ExtractionView from ".";
 import { GetExtraction } from "../../actionTypes/extraction";
+import { extraction } from "../../mocks/extraction";
 
 describe("ExtractionView component", () => {
   const defaultProps = {
     apiPendingRequests: [],
     extraction,
-  }
+  };
   let wrapper: ShallowWrapper;
   it("should render correctly", () => {
     wrapper = shallow(<ExtractionView {...defaultProps} />);
@@ -27,4 +27,4 @@ describe("ExtractionView component", () => {
     wrapper = shallow(<ExtractionView apiPendingRequests={[]} extraction={null} />);
     expect(wrapper).toMatchSnapshot();
   });
-})
+});

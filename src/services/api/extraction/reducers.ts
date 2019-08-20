@@ -1,5 +1,5 @@
+import { ClearExtractionState, GetExtraction } from "../../../actionTypes/extraction";
 import Extraction from "../../../interfaces/extraction";
-import { GetExtraction, ClearExtractionState } from "../../../actionTypes/extraction";
 
 export function extraction(state: Extraction | null = null, action: any) {
   switch (action.type) {

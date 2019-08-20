@@ -8,9 +8,9 @@ describe("Canvas class", () => {
   const context = {
     drawImage: jest.fn(),
     strokeRect: jest.fn(),
-  }
+  };
   // @ts-ignore
-  HTMLCanvasElement.prototype.getContext = jest.fn(() => context)
+  HTMLCanvasElement.prototype.getContext = jest.fn(() => context);
   const canvasElement: HTMLCanvasElement = document.createElement("canvas");
   const canvas = new Canvas(canvasElement);
 
@@ -24,25 +24,25 @@ describe("Canvas class", () => {
   it("should load image correctly", (done: () => void) => {
     let result = canvas.loadImage(file);
     expect(canvas.image.src).toContain(file);
-    //@ts-ignore
+    // @ts-ignore
     canvas.image.onload();
     result.then((success: boolean) => {
-      expect(success).toBeTruthy;
+      expect(success).toBeTruthy();
       done();
     });
 
     result = canvas.loadImage(file);
     expect(canvas.image.src).toContain(file);
-    //@ts-ignore
+    // @ts-ignore
     canvas.image.onerror();
     result.then((success: boolean) => {
-      expect(success).toBeFalsy;
+      expect(success).toBeFalsy();
       done();
-    })
+    });
   });
 
   it("should setup canvas correctly", () => {
-    canvas.setupCanvas()
+    canvas.setupCanvas();
     const width = canvas.image.width;
     const height = canvas.image.height;
     expect(canvas.canvasElement.height).toEqual(height);
@@ -54,25 +54,25 @@ describe("Canvas class", () => {
     canvas.extractShapes(extraction);
     expect(canvas.shapes).toEqual([
       {
+        coord_x1: 0.865,
+        coord_x2: 0.18,
+        coord_y1: 0.249,
+        coord_y2: 0.818,
         strokeStyle: "red",
-        "coord_x1": 0.865,
-        "coord_x2": 0.18,
-        "coord_y1": 0.249,
-        "coord_y2": 0.818
       },
       {
+        coord_x1: 0.255,
+        coord_x2: 0.2,
+        coord_y1: 0.461,
+        coord_y2: 0.927,
         strokeStyle: "red",
-        "coord_x1": 0.255,
-        "coord_x2": 0.2,
-        "coord_y1": 0.461,
-        "coord_y2": 0.927,
       },
       {
+        coord_x1: 0.216,
+        coord_x2: 0.256,
+        coord_y1: 0.16,
+        coord_y2: 0.145,
         strokeStyle: "red",
-        "coord_x1": 0.216,
-        "coord_x2": 0.256,
-        "coord_y1": 0.16,
-        "coord_y2": 0.145,
       },
     ]);
   });
@@ -80,34 +80,23 @@ describe("Canvas class", () => {
   it("should create shapes correctly", () => {
     canvas.createShapes();
     expect(canvas.context!.strokeRect).toHaveBeenCalledTimes(canvas.shapes.length);
-
-    const shapes = [
-      {
-        strokeStyle: "red",
-        coord_x1: 0.4,
-        coord_x2: 0.6,
-        coord_y1: 0.2,
-        coord_y2: 0.8
-      },
-    ];
     canvas.createShapes();
     expect(canvas.context!.strokeStyle).toEqual("red");
-  })
-})
-
+  });
+});
 
 describe("handleCanvas function", () => {
   let canvas: any;
   const setError = jest.fn();
-  const file = new File([""], "filename", { type: 'text/html' });
+  const newFile = new File([""], "filename", { type: "text/html" });
   window.URL.createObjectURL = jest.fn(() => "url");
   beforeEach(() => {
     const canvasElement: HTMLCanvasElement = document.createElement("canvas");
     canvas = new Canvas(canvasElement);
     canvas.loadImage = jest.fn(() => ({ then: jest.fn() }));
-  })
+  });
   it("should load image to canvas correctly", () => {
-    handleCanvas(canvas, extraction, file, setError);
+    handleCanvas(canvas, extraction, newFile, setError);
     expect(canvas.loadImage).toHaveBeenCalled();
-  })
-})
+  });
+});
