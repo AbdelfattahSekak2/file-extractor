@@ -1,0 +1,15 @@
+@import "../../../styles/mixins";
+
+.error-message {
+  width: 50% !important;
+  .header {
+    text-align: center;
+    i {
+      color: $dark-grey;
+    }
+  }
+  .content {
+    display: flex !important;
+    justify-content: center;
+  }
+}

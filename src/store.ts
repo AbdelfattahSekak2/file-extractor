@@ -4,12 +4,14 @@ import { all } from "redux-saga/effects";
 
 import * as apiReducers from "./services/api/reducers";
 import * as extractionReducers from "./services/api/extraction/reducers";
+import * as errorReducers from "./services/state/error/reducers";
 
 import extractionSaga from "./services/api/extraction/saga";
 
 const rootReducer = combineReducers({
   ...apiReducers,
   ...extractionReducers,
+  ...errorReducers,
 });
 
 function* rootSaga() {

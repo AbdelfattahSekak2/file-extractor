@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorMessage component should render correctly 1`] = `
+<Modal
+  centered={true}
+  className="error-message"
+  closeOnDimmerClick={true}
+  closeOnDocumentClick={false}
+  dimmer={true}
+  eventPool="Modal"
+  onClose={[Function]}
+  open={false}
+>
+  <ModalHeader>
+    <Icon
+      as="i"
+      name="frown"
+      size="big"
+    />
+    error
+  </ModalHeader>
+  <ModalContent>
+    <Button
+      as="button"
+      onClick={[Function]}
+    >
+      Try again
+    </Button>
+  </ModalContent>
+</Modal>
+`;
