@@ -10,10 +10,11 @@ interface IProps {
 }
 
 const supportedFiles = [
+  "jpeg",
   "jpg",
   "png",
   "pdf",
-  "zip"
+  "zip",
 ];
 
 
@@ -24,6 +25,7 @@ const Dropzone: React.FunctionComponent<IProps> = ({
   const onChange = (e: any) => handleOnFileAdded(e.target.files[0]);
 
   const handleOnFileAdded = (file: File) => {
+    console.log(file.type)
     if (supportedFiles.some((e: string) => file.type.includes(e))) {
       onFileAdded(file)
     } else {
@@ -49,7 +51,7 @@ const Dropzone: React.FunctionComponent<IProps> = ({
         className="file-input"
         type="file"
         onChange={onChange}
-        accept={supportedFiles.join(", .")}
+        accept={"." + supportedFiles.join(", .")}
       />
       <Icon name="cloud upload" size="huge" />
     </label>

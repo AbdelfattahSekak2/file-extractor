@@ -43,7 +43,7 @@ const ImagePreview: React.FunctionComponent<IProps> = ({
         ? <canvas ref={canvasRef} id="canvas" />
         : <div className="not-supported">
           <Icon name="frown" size="huge" />
-          <p>We cannot render this file</p>
+          <p>Sorry, we cannot render this file</p>
         </div>
     }
   </div>;

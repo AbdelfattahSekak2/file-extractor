@@ -2,10 +2,25 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
 
 .dashboard-container {
-  display: flex;
-  flex-direction: row;
   background: $light-grey;
   padding: 20px;
   height: 100vh;
   font-family: "Roboto", sans-serif;
+  .content {
+    display: flex;
+    flex-direction: row;
+    height: 80vh;
+  }
+  .dashboard-title {
+    margin: auto;
+    height: 10vh;
+    line-height: 10vh;
+    font-size: 35px;
+    text-align: center;
+    color: $dark-grey;
+    strong {
+      color: $mindee-red;
+      font-size: 40px;
+    }
+  }
 }

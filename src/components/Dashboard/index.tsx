@@ -8,9 +8,12 @@ import ErrorContainer from "../../containers/ErrorContainer";
 
 const Dashboard: React.FunctionComponent = () => (
   <div className="dashboard-container">
-    <ErrorContainer />
-    <UploderContainer />
-    <ExtractionContainer />
+    <div className="dashboard-title"><strong>Mindee</strong> File Extractor</div>
+    <div className="content">
+      <ErrorContainer />
+      <UploderContainer />
+      <ExtractionContainer />
+    </div>
   </div>
 )
 
