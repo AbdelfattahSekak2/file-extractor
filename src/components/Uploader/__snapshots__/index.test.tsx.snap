@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Uploader component should render correctly 1`] = `
+<div
+  className="uploader-container"
+>
+  <Dropzone
+    onFileAdded={[Function]}
+    setError={[MockFunction]}
+  />
+</div>
+`;
+
+exports[`Uploader component should render correctly 2`] = `
+<div
+  className="uploader-container"
+/>
+`;

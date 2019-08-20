@@ -5,10 +5,15 @@ import { Provider } from "react-redux";
 import configureStore from "redux-mock-store";
 
 import UploaderContainer from ".";
+import { extraction } from "../../services/api/extraction/reducers";
 
-describe("Container", () => {
+describe("Unploader container", () => {
   const initialState = {
-    getExtraction: jest.fn()
+    getExtraction: jest.fn(),
+    clearExtractionState: jest.fn(),
+    setError: jest.fn(),
+    extraction,
+    apiPendingRequests: [],
   };
   const mockStore = configureStore();
   const store = mockStore(initialState);

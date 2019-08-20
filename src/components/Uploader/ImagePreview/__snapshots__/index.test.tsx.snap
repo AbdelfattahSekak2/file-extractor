@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImagePreview component should render correctly 1`] = `
+<div
+  className="image-preview"
+>
+  <Icon
+    as="i"
+    className="supported"
+    name="times"
+    onClick={[MockFunction]}
+    size="big"
+  />
+  <canvas
+    id="canvas"
+  />
+</div>
+`;

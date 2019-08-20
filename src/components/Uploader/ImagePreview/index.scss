@@ -1,0 +1,43 @@
+@import "../../../styles/mixins";
+
+.image-preview {
+  box-shadow: $box-shadow;
+  background: white;
+  border-radius: $border-radius;
+  height: 75vh;
+  position: relative;
+  min-width: 600px;
+  canvas {
+    border-radius: $border-radius;
+    height: 100%;
+    margin: auto;
+  }
+  i.icon {
+    cursor: pointer;
+    position: absolute;
+    right: 2% !important;
+    top: 2%;
+    color: $dark-grey;
+    &.supported {
+      color: white !important;
+    }
+  }
+
+  .not-supported {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p {
+      font-size: 28px;
+      font-weight: 500px;
+      text-align: center;
+      color: $dark-grey;
+    }
+    i.icon {
+      color: $dark-grey;
+      position: unset;
+    }
+  }
+}
