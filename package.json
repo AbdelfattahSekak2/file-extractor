@@ -24,6 +24,7 @@
     "react-scripts": "3.1.0",
     "redux": "^4.0.4",
     "redux-saga": "^1.0.5",
+    "semantic-ui-react": "^0.87.3",
     "typescript": "3.5.3"
   },
   "scripts": {
@@ -55,10 +56,10 @@
     ],
     "coverageThreshold": {
       "global": {
-        "branches": 70,
-        "functions": 70,
-        "lines": 70,
-        "statements": 70
+        "branches": 85,
+        "functions": 58,
+        "lines": 85,
+        "statements": 85
       }
     },
     "coverageReporters": [
