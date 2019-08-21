@@ -2,12 +2,32 @@
 
 .extraction-container {
   display: flex;
+  flex-direction: column;
   position: relative;
-  border-radius: $border-radius;
   padding: 10px;
-  width: 50%;
+  width: 30%;
   margin: auto;
+  h1 {
+    font-size: 30px;
+    font-weight: 500;
+    color: $dark-grey;
+    text-align: center;
+    margin: 0;
+  }
   .ui.dimmer {
     position: fixed;
+  }
+  .slick-slider {
+    .slick-list {
+      width: 100%;
+    }
+    .slick-arrow {
+      &::before {
+        font-size: 40px;
+      }
+      &.slick-prev {
+        left: -50px;
+      }
+    }
   }
 }

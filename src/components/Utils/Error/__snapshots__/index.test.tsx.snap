@@ -14,7 +14,7 @@ exports[`ErrorMessage component should render correctly 1`] = `
   <ModalHeader>
     <Icon
       as="i"
-      name="frown"
+      name="exclamation triangle"
       size="big"
     />
     error

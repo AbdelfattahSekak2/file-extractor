@@ -31,7 +31,7 @@ const ErrorMessage: React.FunctionComponent<IAppProps> = ({
       onClose={() => setOpen(false)}
     >
       <Modal.Header>
-        <Icon name="frown" size="big" />
+        <Icon name="exclamation triangle" size="big" />
         {error}
       </Modal.Header>
       <Modal.Content>

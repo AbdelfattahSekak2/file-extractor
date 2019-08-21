@@ -7,17 +7,14 @@ import PredictionItem from "./PredictionItem";
 
 interface IProps {
   prediction: Prediction;
-  count: number;
 }
 
 const PredictionView: React.FunctionComponent<IProps> = ({
   prediction,
-  count,
 }) => {
   const { orientation, taxes, date, total, category } = prediction;
   return (
     <div className="prediction-container" >
-      <div className="title">Prediction {count}</div>
       {
         orientation &&
         <PredictionItem

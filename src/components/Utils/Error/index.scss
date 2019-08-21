@@ -1,11 +1,10 @@
 @import "../../../styles/mixins";
 
 .error-message {
-  width: 50% !important;
+  width: 30% !important;
   .header {
-    text-align: center;
     i {
-      color: $dark-grey;
+      color: $mindee-red;
     }
   }
   .content {

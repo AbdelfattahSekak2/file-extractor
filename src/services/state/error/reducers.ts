@@ -1,7 +1,7 @@
 import { SetError } from "../../../actionTypes/error";
 import { GetExtraction } from "../../../actionTypes/extraction";
 
-export function error(state: string | null = null, action: any) {
+export function error(state: string | null = "test", action: any) {
   switch (action.type) {
     case SetError.DEFAULT:
       return action.message;
