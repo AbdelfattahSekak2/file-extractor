@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: row;
   border-radius: $border-radius;
-  margin-top: 30px;
+  margin-bottom: 30px;
   label {
     color: $dark-grey;
     background: white;
@@ -51,5 +51,11 @@
     .details + .details {
       margin-top: 5px;
     }
+  }
+}
+
+@media (max-width: 900px) {
+  .prediction-item {
+    margin-bottom: 0;
   }
 }

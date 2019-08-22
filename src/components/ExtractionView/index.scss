@@ -12,7 +12,7 @@
     font-weight: 500;
     color: $dark-grey;
     text-align: center;
-    margin: 0;
+    padding: 20px;
   }
   .ui.dimmer {
     position: fixed;
@@ -27,6 +27,20 @@
       }
       &.slick-prev {
         left: -50px;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .extraction-container {
+    width: 100%;
+    h1 {
+      font-size: 16px;
+    }
+    .slick-slider {
+      .slick-arrow {
+        display: none !important;
       }
     }
   }

@@ -6,6 +6,8 @@
   padding: 20px;
   height: 100vh;
   font-family: "Roboto", sans-serif;
+  overflow-y: auto;
+  overflow-x: hidden;
   .content {
     display: flex;
     flex-direction: row;
@@ -22,6 +24,14 @@
     strong {
       color: $mindee-red;
       font-size: 40px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .dashboard-container {
+    .content {
+      flex-direction: column;
     }
   }
 }
